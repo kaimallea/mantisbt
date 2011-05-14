@@ -249,6 +249,14 @@ $(document).ready( function() {
 		}
 		$(this).val(0);
 	});
+	
+	// Toggle all sections
+	$('td.form-title')
+        .css('cursor', 'pointer')
+        .bind('click', function () {
+            $(this).parents('thead').next().toggle();        
+        });
+        
 });
 
 function setBugLabel() {
