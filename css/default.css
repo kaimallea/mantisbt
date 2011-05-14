@@ -48,6 +48,8 @@ table.width75		{ width: 75%;  border: solid 1px #000000; }
 table.width60		{ width: 60%;  border: solid 1px #000000; }
 table.width50		{ width: 50%;  border: solid 1px #000000; }
 
+table.my-buglist    { border-top-left-radius: 5px; border-top-right-radius: 5px }
+
 td,th 				{ font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10pt; padding: 4px; text-align: left; }
 td.center			{ text-align: center; }
 td.left				{ text-align: left; }
@@ -57,7 +59,8 @@ td.overdue			{ background-color: #ff0000; color: #000000; font-weight: bold; }
 
 td.col-1			{ background-color: #d8d8d8; color: #000000; }
 td.col-2			{ background-color: #e8e8e8; color: #000000; }
-td.form-title		{ background-color: #ffffff; color: #000000; font-weight: bold; text-align: left; }
+td.form-title		{ background-color: #666666; color: #ffffff; font-weight: bold; text-align: left; }
+td.form-title a     { color: #ffffff; }
 td.form-title-caps	{ background-color: #ffffff; color: #000000; font-weight: bold; text-align: left; text-transform: uppercase; }
 td.nopad			{ padding: 0px; }
 td.small-caption, th.small-caption	{ font-size: 8pt; }
