@@ -593,3 +593,13 @@ ul.project-list li span.access-level, ul.project-list li span.view-state { displ
 .tag-link {
 	margin: 0em .5em;
 }
+
+div.MyViewControl{background url('images/MyContainerDivBG.png') repeat-x;font-family:Arial;display:block;cursor:pointer;background:#818285;min-width:200px;height:20px;float:left;padding:0px;margin:0px;}
+
+div.MyViewControl a
+{color:#fff;}
+
+div.MyViewControlLeft{padding:0px;margin:0px 0px 0px 5px;display:block;float:left;width:12px;height:20px;background:url('images/MyContainerDivLeft.png') no-repeat;}
+div.MyViewControlRight{padding:0px;margin:0px;display:block;float:left;width:12px;height:20px;background:url('images/MyContainerDivRight.png') no-repeat;}
+
+div.report {clear:both;display:block;}
