@@ -333,7 +333,7 @@ function ToggleDiv( p_div ) {
 		g_collapse_clear = 0;
 	}
 	var t_open_display = $(t_open_div).css('display');
-	$(t_open_div).toggle();
+	$(t_open_div).slideToggle();
 
 	if( $(t_closed_div).length ) {
 		$(t_closed_div).toggle();
