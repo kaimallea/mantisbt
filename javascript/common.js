@@ -283,7 +283,13 @@ $(document).ready( function() {
         .bind('click', function () {
             $(this).parents('thead').next().toggle();        
         });
-    */
+    	*/
+
+
+	//SlideToggle for MyReports View
+	//Uncomment to execute
+	//toggleReports();
+       
 });
 
 function setBugLabel() {
@@ -397,4 +403,40 @@ function setDisplay(idTag, state)
 function toggleDisplay(idTag)
 {
 	setDisplay( idTag, (document.getElementById(idTag).style.display == 'none')?1:0 );
+}
+
+/*
+ * Add Toggle Functionality to MyReports View
+ */
+
+function toggleReports(){
+$('table.my-buglist').each(function(){
+
+//Get Current Header
+var currentHeader = $(this).children('thead').children('tr').children('td.form-title');
+
+//Hide Current Header
+currentHeader.hide();
+
+//Get Current Header's Contents
+var currentHeaderHtml = currentHeader.html();
+
+//Build New Header Contents
+var controlDiv = "<div class='MyViewControlLeft'></div>";
+controlDiv += "<div class='MyViewControl'>" + currentHeaderHtml + "</div>";
+controlDiv += "<div class='MyViewControlRight'></div>";
+
+//Add New Header On Top Of Report Table
+$(this).before($(controlDiv));
+
+});
+
+//Wrap Report Table in Div, classed: Reports
+$('div.MyViewControl').next().next().wrap("<div style='cursor:pointer;display:block;' class='report' />");
+
+//Bind Click function to Each Report Tab
+$('div.MyViewControl').bind('click', function(){
+$(this).next().next('.report').slideToggle(300);
+
+});
 }
