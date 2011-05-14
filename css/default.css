@@ -48,7 +48,8 @@ table.width75		{ width: 75%;  border: solid 1px #000000; }
 table.width60		{ width: 60%;  border: solid 1px #000000; }
 table.width50		{ width: 50%;  border: solid 1px #000000; }
 
-table.my-buglist    { border-top-left-radius: 5px; border-top-right-radius: 5px }
+table.my-buglist    { }
+div.header a        { color: #fff; border-bottom: solid 1px #fff; }
 
 td,th 				{ font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10pt; padding: 4px; text-align: left; }
 td.center			{ text-align: center; }

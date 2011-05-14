@@ -249,14 +249,41 @@ $(document).ready( function() {
 		}
 		$(this).val(0);
 	});
-	
+
+    // Re-format table headers on views
+    $('table.my-buglist').each(function () {
+        var $this = $(this),
+            txt = $this.find('thead').find('td.form-title').html();
+
+        $this.before(
+            $('<div class="header"></div>')
+                .css({
+                    'backgroundColor': '#666',
+                    'color': '#fff',
+                    'width': '250px',
+                    'padding': '5px',
+                    'font-weight': 'bold'
+                })
+        )
+        .prev().html( txt )
+        .next().find('thead').hide();
+    });
+    
+    // Enable sliding on headers
+	$('div.header')
+        .css('cursor', 'pointer')
+        .bind('click', function () {
+            $(this).next().toggle();        
+        });
+        
 	// Toggle all sections
+	/*
 	$('td.form-title')
         .css('cursor', 'pointer')
         .bind('click', function () {
             $(this).parents('thead').next().toggle();        
         });
-        
+    */
 });
 
 function setBugLabel() {
