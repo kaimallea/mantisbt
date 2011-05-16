@@ -123,12 +123,18 @@ td.login-info-middle	{ width: 33%; padding: 0px; text-align: center; }
 td.login-info-right		{ width: 33%; padding: 0px; text-align: right; white-space: nowrap; }
 
 .bug-jump { clear: both; display:block; float: right; padding: .25em; margin: 0; position: relative; top: .3em; z-index: 100; border: none; }
-.main-menu { float: right; width:100%; margin: 0; padding: 0; overflow: hidden; font-size: 1em; position: relative; top: -2em; border: 1px solid #999; background-color: #e8e8e8; z-index: 99; }
-.main-menu div { width: 93.75%; }
+
+#container { }
+
+.main-menu { /*float: right;*/width:100%; margin: 0; padding: 0; overflow: hidden; font-size: 1em; /*position: relative; top: -2em; border: 1px solid #999; z-index: 99; */ }
+
+.main-menu div { /*width: 93.75%;*/ }
+/*
 .main-menu ul { clear: left; float: left; list-style: none; position: relative; left: 50%; margin: 0 0 0 -3.75em; padding: .25em; width: 90%; }
 .main-menu ul li { display:block; float: left; list-style: none; padding: .15em .5em; margin: 0; position: relative; right: 50%; }
 .main-menu ul li a { padding-right: .9em; border-right: 1px solid #000; text-decoration: underline; }
 .main-menu ul li > a#logout-link { padding-right: 0; border-right: none; }
+*/
 
 #manage-menu, #account-menu, #summary-menu , #summary-submenu, #manage-config-menu, #manage-user-filter-menu, #manage-tags-filter-menu { float: left; width: 100%; margin: 0; padding: 0; overflow: hidden; font-size: 1em; position: relative; top: -1.5em; }
 #manage-menu ul, #manage-config-menu ul, #summary-menu ul, #summary-submenu ul, #manage-user-filter-menu ul, #manage-tags-filter-menu ul { clear: left; float: left; list-style: none; position: relative; left: 50%; padding: 0; margin: 0; text-align: center; }
@@ -160,7 +166,7 @@ span.switch-view:before { content: "[" }
 span.permalink:after,
 span.switch-view:after { content: "]" }
 
-#content { clear: both; position: relative; top: 0; margin: 0; padding: .5em; }
+#content { /* clear: both; position: relative; top: 0; */margin: 0; padding: 2em 1em 1em 1em; background-color: #f5f5f5; border: 1px solid #6c6; border-top: none;}
 .recently-visited { position: relative; top: -2.5em; float: right; text-align: right; font-size: x-small; }
 
 br { clear:both; }
@@ -605,3 +611,57 @@ div.MyViewControlRight{padding:0px;margin:0px;display:block;float:left;width:12p
 div.report {clear:both;display:block;}
 
 table tbody tr.highlightedIssue{background:#efefef;color:#000;}
+
+/* Tabs */
+ul.menu { /* general settings */
+    text-align: left; /* set to left, right or center */
+    margin: 1em 0 0 0; /* set margins as desired */
+    font: bold 12px Verdana, Arial, sans-serif; /* set font as desired */
+    border-bottom: 1px solid #6c6; /* set border COLOR as desired */
+    list-style-type: none;
+    padding: 3px 10px 6px 10px; /* THIRD number must change with respect to padding-top (X) below */
+}
+ 
+ul.menu li { /* do not change */
+    display: inline;
+}
+ 
+ul.menu li.selected  { /* settings for selected tab */
+    border-bottom: 1px solid #fff; /* set border color to page background color */
+    background-color: #fff; /* set background color to match above border color */
+}
+ 
+ul.menu li.selected a { /* settings for selected tab link */
+    background-color: #fff; /* set selected tab background color as desired */
+    color: #000; /* set selected tab link color as desired */
+    position: relative;
+    top: 1px;
+    padding-top: 7px; /* must change with respect to padding (X) above and below */
+}
+ 
+ul.menu li a { /* settings for all tab links */
+    padding: 6px 15px; /* set padding (tab size) as desired; FIRST number must change with respect to padding-top (X) above */
+    border: 1px solid #6c6; /* set border COLOR as desired; usually matches border color specified in #tabnav */
+    background-color: #cfc; /* set unselected tab background color as desired */
+    color: #666; /* set unselected tab link color as desired */
+    margin-right: 1px; /* set additional spacing between tabs as desired */
+    text-decoration: none;
+    border-bottom: none;
+    
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-top-left-radius: 5px;
+    -moz-border-top-right-radius: 5px;
+    -ie-border-top-left-radius: 5px;
+    -ie-border-top-right-radius: 5px;
+    -o-border-top-left-radius: 5px;
+    -o-border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+ 
+ul.menu a:hover { /* settings for hover effect */
+    background: #fff; /* set desired hover color */
+}
+ 
+/* End Tabs */
