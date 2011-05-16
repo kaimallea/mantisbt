@@ -289,6 +289,9 @@ $(document).ready( function() {
 	//SlideToggle for MyReports View
 	//Uncomment to execute
 	//toggleReports();
+
+	//Add row highlighting to View Issues Page
+	addRowHighlighting();
        
 });
 
@@ -440,3 +443,18 @@ $(this).next().next('.report').slideToggle(300);
 
 });
 }
+
+//Highlights given table row
+var highlightSelectedRow = function(currentRow){
+	$(currentRow).toggleClass('highlightedIssue');	//Toggle 'highlightedIssue' class
+};
+
+//Row Highlighting for Buglist Issues
+function addRowHighlighting(){
+	var bugTable = $('table#buglist tbody');
+	bugTable.delegate('tr'
+			, 'hover'
+			, function(){highlightSelectedRow(this)}
+);
+}
+
