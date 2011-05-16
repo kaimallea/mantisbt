@@ -269,6 +269,7 @@ function html_page_bottom1( $p_file = null ) {
 
 	event_signal( 'EVENT_LAYOUT_CONTENT_END' );
 	echo '</div>', "\n";
+	echo '</div>', "\n"; // End of 'container' div
 	if( config_get( 'show_footer_menu' ) ) {
 		echo '<br />';
 		print_menu();
@@ -863,6 +864,7 @@ function print_menu() {
 		echo '<input type="submit" class="button-small" value="' . lang_get( 'jump' ) . '" />&#160;';
 		echo '</fieldset>';
 		echo '</form>';
+		echo '<div class="container">';
 		echo '<div class="main-menu">';
 		echo '<div>';
 		echo '<ul class="menu">';
