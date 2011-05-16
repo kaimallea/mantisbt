@@ -49,6 +49,20 @@ table.width60		{ width: 60%;  border: solid 1px #000000; }
 table.width50		{ width: 50%;  border: solid 1px #000000; }
 
 table.my-buglist    { }
+
+div.header { 
+    -webkit-border-top-left-radius: 6px;
+    -webkit-border-top-right-radius: 6px;
+    -moz-border-top-left-radius: 6px;
+    -moz-border-top-right-radius: 6px;
+    -ie-border-top-left-radius: 6px;
+    -ie-border-top-right-radius: 6px;
+    -o-border-top-left-radius: 6px;
+    -o-border-top-right-radius: 6px;  
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
 div.header a        { color: #fff; border-bottom: solid 1px #fff; }
 
 td,th 				{ font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10pt; padding: 4px; text-align: left; }
