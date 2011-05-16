@@ -603,3 +603,5 @@ div.MyViewControlLeft{padding:0px;margin:0px 0px 0px 5px;display:block;float:lef
 div.MyViewControlRight{padding:0px;margin:0px;display:block;float:left;width:12px;height:20px;background:url('images/MyContainerDivRight.png') no-repeat;}
 
 div.report {clear:both;display:block;}
+
+table tbody tr.highlightedIssue{background:#efefef;color:#000;}
