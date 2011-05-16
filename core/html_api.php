@@ -510,9 +510,10 @@ function html_top_banner() {
 function html_login_info() {
 	$t_username = current_user_get_field( 'username' );
 	$t_access_level = get_enum_element( 'access_levels', current_user_get_access_level() );
-	$t_now = date( config_get( 'complete_date_format' ) );
+	$t_now = date( config_get( 'custom_date_format' ) );
 	$t_realname = current_user_get_field( 'realname' );
-
+    
+    echo '<div id="user-panel">';
 	echo '<div id="login-info">';
 	if( current_user_is_anonymous() ) {
 		$t_return_page = $_SERVER['SCRIPT_NAME'];
@@ -528,12 +529,12 @@ function html_login_info() {
 			echo '<span id="signup-link"><a href="' . helper_mantis_url( 'signup_page.php' ) . '">' . lang_get( 'signup_link' ) . '</a></span>';
 		}
 	} else {
-		echo '<span id="logged-in-label">' . lang_get( 'logged_in_as' ) . '</span>';
-		echo '<span id="logged-in-user">' . string_html_specialchars( $t_username ) . '</span>';
+		echo '<span id="logged-in-label">' . lang_get( 'logged_in_as' ) . ' </span>';
+		echo '<span id="logged-in-user">' . string_html_specialchars( $t_username ) . '</span><br/>';
 		echo '<span id="logged-in">';
 		echo !is_blank( $t_realname ) ?  '<span id="logged-in-realname">' . string_html_specialchars( $t_realname ) . '</span>' : '';
 		echo '<span id="logged-in-accesslevel" class="' . $t_access_level . '">' . $t_access_level . '</span>';
-		echo '</span>';
+		echo '</span><br/>';
 	}
 	echo '</div>';
 
@@ -547,15 +548,6 @@ function html_login_info() {
 		if( count( current_user_get_accessible_subprojects( $t_project_id ) ) == 0 ) {
 			$t_show_project_selector = false;
 		}
-	}
-
-	if( OFF != config_get( 'rss_enabled' ) ) {
-		echo '<div id="rss-feed">';
-		# Link to RSS issues feed for the selected project, including authentication details.
-		echo '<a href="' . htmlspecialchars( rss_get_issues_feed_url() ) . '">';
-		echo '<img src="' . helper_mantis_url( 'images/rss.png' ) . '" alt="' . lang_get( 'rss' ) . '" title="' . lang_get( 'rss' ) . '" />';
-		echo '</a>';
-		echo '</div>';
 	}
 
 	if( $t_show_project_selector ) {
@@ -574,6 +566,16 @@ function html_login_info() {
 	} else {
 		echo '<div id="current-time-centered">' . $t_now . '</div>';
 	}
+	
+	if( OFF != config_get( 'rss_enabled' ) ) {
+		echo '<div id="rss-feed">';
+		# Link to RSS issues feed for the selected project, including authentication details.
+		echo '<a href="' . htmlspecialchars( rss_get_issues_feed_url() ) . '">';
+		echo '<img src="' . helper_mantis_url( 'images/rss.png' ) . '" alt="' . lang_get( 'rss' ) . '" title="' . lang_get( 'rss' ) . '" />';
+		echo '</a>';
+		echo '</div>';
+	}
+	echo '</div>'; // End user panel
 }
 
 /**

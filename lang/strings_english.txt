@@ -195,7 +195,7 @@ $s_messages = array(
 	'proceed' => 'Proceed',
 	
 	'switch' => 'Switch',
-	'logged_in_as' => 'Logged in as',
+	'logged_in_as' => 'Hello',
 	
 	'prefix_for_deleted_users' => 'user',
 	
