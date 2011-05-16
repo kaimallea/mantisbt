@@ -627,7 +627,7 @@ div.report {clear:both;display:block;}
 table tbody tr.highlightedIssue{background:#efefef;color:#000;}
 
 /* Tabs */
-ul.menu { /* general settings */
+div.main-menu ul.menu { /* general settings */
     text-align: left; /* set to left, right or center */
     margin: 1em 0 0 0; /* set margins as desired */
     font: bold 12px Verdana, Arial, sans-serif; /* set font as desired */
@@ -636,16 +636,16 @@ ul.menu { /* general settings */
     padding: 3px 10px 6px 10px; /* THIRD number must change with respect to padding-top (X) below */
 }
  
-ul.menu li { /* do not change */
+div.main-menu ul.menu li { /* do not change */
     display: inline;
 }
  
-ul.menu li.selected  { /* settings for selected tab */
+div.main-menu ul.menu li.selected  { /* settings for selected tab */
     border-bottom: 1px solid #fff; /* set border color to page background color */
     background-color: #fff; /* set background color to match above border color */
 }
  
-ul.menu li.selected a { /* settings for selected tab link */
+div.main-menu ul.menu li.selected a { /* settings for selected tab link */
     background-color: #fff; /* set selected tab background color as desired */
     color: #000; /* set selected tab link color as desired */
     position: relative;
@@ -653,7 +653,7 @@ ul.menu li.selected a { /* settings for selected tab link */
     padding-top: 7px; /* must change with respect to padding (X) above and below */
 }
  
-ul.menu li a { /* settings for all tab links */
+div.main-menu ul.menu li a { /* settings for all tab links */
     padding: 6px 15px; /* set padding (tab size) as desired; FIRST number must change with respect to padding-top (X) above */
     border: 1px solid #6c6; /* set border COLOR as desired; usually matches border color specified in #tabnav */
     background-color: #cfc; /* set unselected tab background color as desired */
@@ -674,7 +674,7 @@ ul.menu li a { /* settings for all tab links */
     border-top-right-radius: 5px;
 }
  
-ul.menu a:hover { /* settings for hover effect */
+div.main-menu ul.menu a:hover { /* settings for hover effect */
     background: #fff; /* set desired hover color */
 }
  
