@@ -50,7 +50,14 @@ table.width50		{ width: 50%;  border: solid 1px #000000; }
 
 table.my-buglist    { }
 
-div.header { 
+div.header {
+    background-color: #7a7a7a;
+    color: #fff;
+    width: 250px;
+    padding: 5px;
+    font-size: .9em;
+    font-weight: bold;
+    
     -webkit-border-top-left-radius: 6px;
     -webkit-border-top-right-radius: 6px;
     -moz-border-top-left-radius: 6px;
@@ -63,7 +70,8 @@ div.header {
     border-top-right-radius: 6px;
 }
 
-div.header a        { color: #fff; border-bottom: solid 1px #fff; }
+div.header a        { color: #fff; }
+div.header a:hover  { border-bottom: solid 1px #fff; }
 
 td,th 				{ font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10pt; padding: 4px; text-align: left; }
 td.center			{ text-align: center; }
