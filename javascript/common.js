@@ -413,44 +413,48 @@ function toggleDisplay(idTag)
  */
 
 function toggleReports(){
-$('table.my-buglist').each(function(){
+	$('table.my-buglist').each(function(){
 
-//Get Current Header
-var currentHeader = $(this).children('thead').children('tr').children('td.form-title');
+		//Get Current Header
+		var currentHeader = $(this).children('thead').children('tr').children('td.form-title');
 
-//Hide Current Header
-currentHeader.hide();
+		//Hide Current Header
+		currentHeader.hide();
 
-//Get Current Header's Contents
-var currentHeaderHtml = currentHeader.html();
+		//Get Current Header's Contents
+		var currentHeaderHtml = currentHeader.html();
 
-//Build New Header Contents
-var controlDiv = "<div class='MyViewControlLeft'></div>";
-controlDiv += "<div class='MyViewControl'>" + currentHeaderHtml + "</div>";
-controlDiv += "<div class='MyViewControlRight'></div>";
+		//Build New Header Contents
+		var controlDiv = "<div class='MyViewControlLeft'></div>";
+			controlDiv += "<div class='MyViewControl'>" + currentHeaderHtml + "</div>";
+			controlDiv += "<div class='MyViewControlRight'></div>";
 
-//Add New Header On Top Of Report Table
-$(this).before($(controlDiv));
-
-});
-
-//Wrap Report Table in Div, classed: Reports
-$('div.MyViewControl').next().next().wrap("<div style='cursor:pointer;display:block;' class='report' />");
-
-//Bind Click function to Each Report Tab
-$('div.MyViewControl').bind('click', function(){
-$(this).next().next('.report').slideToggle(300);
+		//Add New Header On Top Of Report Table
+		$(this).before($(controlDiv));
 
 });
+
+	//Wrap Report Table in Div, classed: Reports
+	$('div.MyViewControl').next().next().wrap("<div style='cursor:pointer;display:block;' class='report' />");
+
+	//Bind Click function to Each Report Tab
+	$('div.MyViewControl').bind('click', function(){
+	$(this).next().next('.report').slideToggle(300);
+
+	});
 }
 
-//Highlights given table row
+/*
+ * Highlights given table row
+*/
 var highlightSelectedRow = function(currentRow){
 	$(currentRow).toggleClass('highlightedIssue');	//Toggle 'highlightedIssue' class
 };
 
-//Row Highlighting for Buglist Issues
-function addRowHighlighting(){
+/*
+ * Row Highlighting for Buglist Issues
+*/
+var addRowHighlighting = function(){
 	var bugTable = $('table#buglist tbody');
 	bugTable.delegate('tr'
 			, 'hover'
@@ -458,3 +462,39 @@ function addRowHighlighting(){
 );
 }
 
+/*
+ * Add Date pickers to Date Filter Menu
+ */
+
+var AddDatePickers = function(){
+
+	//Get Filter Date Cells
+	var dateFilterCell = $('td#do_filter_by_date_filter_target');
+	var startDateCell = $('td#do_filter_by_date_filter_target table td').has('select[name="start_year"]');
+	var endDateCell = $('td#do_filter_by_date_filter_target table td').has('select[name="end_year"]');
+
+	//Input Label Element Strings
+	var startDateInputFieldMarkup = "<input id='startDate' name='startDate' class='filterField' />";
+	var endDateInputFieldMarkup = "<input id='endDate' name='endDate' class='filterField' />";
+
+	//Replace Date Entry With Input Labels
+	startDateCell.html(startDateInputFieldMarkup);
+	endDateCell.html(endDateInputFieldMarkup);
+
+	//Get Date Input Fields
+	var startDateInput = $('input#startDate');
+	var endDateInput = $('input#endDate');
+
+	//Add date pickers
+	startDateInput.datepicker();
+	endDateInput.datepicker();
+
+	//Retrieve Date Value's
+	var startFilterDateVal = $('#startDate').val();
+	var endFilterDateVal = $('#endDate').val();
+
+	//Convert to legacy date format
+	//var startFilterDate = new Date(startFilterDateVal);
+	//var endFilterDate = new Date(startFilterDateVal);
+
+}
