@@ -255,16 +255,7 @@ $(document).ready( function() {
         var $this = $(this),
             txt = $this.find('thead').find('td.form-title').html();
 
-        $this.before(
-            $('<div class="header"></div>')
-                .css({
-                    'backgroundColor': '#666',
-                    'color': '#fff',
-                    'width': '250px',
-                    'padding': '5px',
-                    'font-weight': 'bold'
-                })
-        )
+        $this.before($('<div class="header"></div>'))
         .prev().html( txt )
         .next().find('thead').hide();
     });
