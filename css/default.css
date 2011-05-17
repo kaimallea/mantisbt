@@ -695,5 +695,17 @@ div.main-menu ul.menu li a { /* settings for all tab links */
 div.main-menu ul.menu a:hover { /* settings for hover effect */
     background: #fff; /* set desired hover color */
 }
- 
+
 /* End Tabs */
+
+/*
+ * Expand / Collapse Buttons
+*/
+
+div.ExpandCollapseButton{display:block;width:14px;height:14px;background:url('images/CollapseExpandBtn.gif') no-repeat 0px 0px;}
+
+.ECButtonExpanded{background-position:0px 0px;}
+
+.ECButtonCollapsed{background-position:-14px 0px;}
+
+
