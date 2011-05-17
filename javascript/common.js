@@ -267,6 +267,9 @@ $(document).ready( function() {
             $(this).next().toggle();        
         });
 
+    // Make issues sortable on 'My View' page
+    $('table.my-buglist tbody').sortable({'items': 'tr'});
+    
     // Make bug list sortable on 'View Issues' page
     $('table#buglist tbody').sortable({'items': 'tr:not(:last)'});
     
