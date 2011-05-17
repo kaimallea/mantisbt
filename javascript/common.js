@@ -489,3 +489,13 @@ var AddDatePickers = function(){
 	//var endFilterDate = new Date(startFilterDateVal);
 
 }
+
+var addControlButton = function(header){
+	//Get Table Headers
+	var headers = $('div.header :last-child');
+
+	var ControlButtonMarkup = "<div class='ExpandCollapseButton' />";	
+
+	//Add Control Button to Header
+	headers.after(ControlButtonMarkup);
+};
