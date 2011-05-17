@@ -266,7 +266,10 @@ $(document).ready( function() {
         .bind('click', function () {
             $(this).next().toggle();        
         });
-        
+
+    // Make bug list sortable on 'View Issues' page
+    $('table#buglist tbody').sortable({'items': 'tr:not(:last)'});
+    
 	// Toggle all sections
 	/*
 	$('td.form-title')
