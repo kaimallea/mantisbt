@@ -698,14 +698,20 @@ div.main-menu ul.menu a:hover { /* settings for hover effect */
 
 /* End Tabs */
 
-/*
- * Expand / Collapse Buttons
-*/
+/* Collapse Buttons */
+div.ExpandCollapseButton{
+	display:block;
+	width:14px;
+	height:14px;
+	background-image:url('images/CollapseExpandBtn.png');
+	background-position:0px 0px;
+	background-repeat:no-repeat;
+	float:right;
+	padding:0px;
+	margin:0px;;
+}
 
-div.ExpandCollapseButton{display:block;width:14px;height:14px;background:url('images/CollapseExpandBtn.gif') no-repeat 0px 0px;float:left;}
-
-.ECButtonExpanded{background-position:0px 0px;}
-
-.ECButtonCollapsed{background-position:-14px 0px;}
+.ECButtonExpanded{background-position:0px 0px!important;}
+.ECButtonCollapsed{background-position:-14px 0px!important;}
 
 

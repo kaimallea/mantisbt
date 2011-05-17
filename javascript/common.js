@@ -272,7 +272,11 @@ $(document).ready( function() {
     
     // Make bug list sortable on 'View Issues' page
     $('table#buglist tbody').sortable({'items': 'tr:not(:last)'});
-    
+        
+			//ToggleButtonImage
+			//console.log($(this).closest('ExpandCollapseButton');
+			$(this).children('.ExpandCollapseButton').toggleClass('ECButtonCollapsed');
+});
 	// Toggle all sections
 	/*
 	$('td.form-title')
@@ -289,7 +293,7 @@ $(document).ready( function() {
 
 	//Add row highlighting to View Issues Page
 	addRowHighlighting();
-       
+       	addControlButtons();
 });
 
 function setBugLabel() {
@@ -496,7 +500,7 @@ var AddDatePickers = function(){
 
 }
 
-var addControlButton = function(header){
+var addControlButtons = function(header){
 	//Get Table Headers
 	var headers = $('div.header :last-child');
 
