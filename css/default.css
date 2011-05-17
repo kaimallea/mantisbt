@@ -702,7 +702,7 @@ div.main-menu ul.menu a:hover { /* settings for hover effect */
  * Expand / Collapse Buttons
 */
 
-div.ExpandCollapseButton{display:block;width:14px;height:14px;background:url('images/CollapseExpandBtn.gif') no-repeat 0px 0px;}
+div.ExpandCollapseButton{display:block;width:14px;height:14px;background:url('images/CollapseExpandBtn.gif') no-repeat 0px 0px;float:left;}
 
 .ECButtonExpanded{background-position:0px 0px;}
 
