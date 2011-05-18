@@ -265,7 +265,11 @@ $(document).ready( function() {
         .css('cursor', 'pointer')
         .bind('click', function () {
             $(this).next().toggle();        
-        });
+ 	
+			//ToggleButtonImage
+			//console.log($(this).closest('ExpandCollapseButton');
+			$(this).children('.ExpandCollapseButton').toggleClass('ECButtonCollapsed');
+	       });
 
     // Make issues sortable on 'My View' page
     $('table.my-buglist tbody').sortable({'items': 'tr'});
@@ -273,10 +277,7 @@ $(document).ready( function() {
     // Make bug list sortable on 'View Issues' page
     $('table#buglist tbody').sortable({'items': 'tr:not(:last)'});
         
-			//ToggleButtonImage
-			//console.log($(this).closest('ExpandCollapseButton');
-			$(this).children('.ExpandCollapseButton').toggleClass('ECButtonCollapsed');
-});
+
 	// Toggle all sections
 	/*
 	$('td.form-title')
