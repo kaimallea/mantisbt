@@ -792,6 +792,12 @@ $g_favicon_image = 'images/favicon.ico';
 $g_logo_image = 'images/mantis_logo.gif';
 
 /**
+ * Logo for login page
+ * @global string $g_logo_image
+ */
+$g_logo_login_image = 'images/mantis_logo_login.png';
+
+/**
  * Logo URL link
  * @global string $g_logo_url
  */

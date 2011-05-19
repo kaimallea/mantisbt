@@ -492,7 +492,14 @@ function html_top_banner() {
 		if( $t_show_url ) {
 			echo '<a id="logo-link" href="', config_get( 'logo_url' ), '">';
 		}
-		echo '<img id="logo-image" alt="Mantis Bug Tracker" src="' . helper_mantis_url( config_get( 'logo_image' ) ) . '" />';
+		
+		if (strpos($_SERVER['PHP_SELF'], 'login_page.php')) {
+		    echo '<img id="logo-image" alt="Mantis Bug Tracker" src="' . helper_mantis_url( config_get( 'logo_login_image' ) ) . '" />';
+		}
+		else {
+		    echo '<img id="logo-image" alt="Mantis Bug Tracker" src="' . helper_mantis_url( config_get( 'logo_image' ) ) . '" />';
+		}
+		
 		if( $t_show_url ) {
 			echo '</a>';
 		}
