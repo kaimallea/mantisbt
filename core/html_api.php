@@ -534,7 +534,7 @@ function html_login_info() {
 		echo '<span id="logged-in">';
 		echo !is_blank( $t_realname ) ?  '<span id="logged-in-realname">' . string_html_specialchars( $t_realname ) . '</span>' : '';
 		echo '<span id="logged-in-accesslevel" class="' . $t_access_level . '">' . $t_access_level . '</span>';
-		echo '</span><br/>';
+		echo '</span>';
 	}
 	echo '</div>';
 
@@ -567,6 +567,7 @@ function html_login_info() {
 		echo '<div id="current-time-centered">' . $t_now . '</div>';
 	}
 	
+	/*
 	if( OFF != config_get( 'rss_enabled' ) ) {
 		echo '<div id="rss-feed">';
 		# Link to RSS issues feed for the selected project, including authentication details.
@@ -575,6 +576,22 @@ function html_login_info() {
 		echo '</a>';
 		echo '</div>';
 	}
+	*/
+	echo '<a href="' . helper_mantis_url( 'account_page.php' ) . '" class="my-account-link">' . lang_get( 'account_link' ) . '</a>';
+	echo '<a href="'. helper_mantis_url( 'logout_page.php' ) . '" class="logout-link">' . lang_get( 'logout_link' ) . '</a>';
+	
+	echo '<form method="post" action="' . helper_mantis_url( 'jump_to_bug.php" class="bug-jump-form">' );
+	echo '<fieldset class="bug-jump">';
+	# CSRF protection not required here - form does not result in modifications
+
+	$t_bug_label = lang_get( 'issue_id' );
+	echo '<input type="hidden" name="bug_label" value="', $t_bug_label, '" />';
+	echo '<input type="text" name="bug_id" size="10" class="small" />&#160;';
+
+	echo '<input type="submit" class="button-small" value="' . lang_get( 'jump' ) . '" />&#160;';
+	echo '</fieldset>';
+	echo '</form>';
+	
 	echo '</div>'; // End user panel
 }
 
@@ -840,10 +857,12 @@ function print_menu() {
 		}
 
 		# Account Page (only show accounts that are NOT protected)
+		/*
 		if( OFF == $t_protected ) {
 			$t_menu_options[] = '<a class="account-menu-link" href="' . helper_mantis_url( 'account_page.php">' ) . lang_get( 'account_link' ) . '</a>';
 		}
-
+        */
+        
 		# Add custom options
 		$t_custom_options = prepare_custom_menu_options( 'main_menu_custom_options' );
 		$t_menu_options = array_merge( $t_menu_options, $t_custom_options );
@@ -852,20 +871,12 @@ function print_menu() {
 		}
 
 		# Logout (no if anonymously logged in)
+		/*
 		if( !current_user_is_anonymous() ) {
 			$t_menu_options[] = '<a id="logout-link" href="' . helper_mantis_url( 'logout_page.php">' ) . lang_get( 'logout_link' ) . '</a>';
 		}
-		echo '<form method="post" action="' . helper_mantis_url( 'jump_to_bug.php" class="bug-jump-form">' );
-		echo '<fieldset class="bug-jump">';
-		# CSRF protection not required here - form does not result in modifications
-
-		$t_bug_label = lang_get( 'issue_id' );
-		echo '<input type="hidden" name="bug_label" value="', $t_bug_label, '" />';
-		echo '<input type="text" name="bug_id" size="10" class="small" />&#160;';
-
-		echo '<input type="submit" class="button-small" value="' . lang_get( 'jump' ) . '" />&#160;';
-		echo '</fieldset>';
-		echo '</form>';
+		*/
+		
 		echo '<div class="container">';
 		echo '<div class="main-menu">';
 		echo '<div>';

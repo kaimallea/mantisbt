@@ -118,9 +118,8 @@ tr.bugnote .time-tracked,
 
 #user-panel {
     position: absolute; 
-    top: 15px;
+    top: 5px;
     right: 15px;
-    padding: .5em 0;
     line-height: 1em;
 }
 
@@ -140,7 +139,7 @@ tr.bugnote .time-tracked,
 #logged-in:after { content: ')' ; }
 #logged-in-realname:after { content: ' - ' ; }
 
-#current-time-centered{  }
+#current-time-centered { margin: 5px auto; }
 #current-time{  }
 #project-selector { border: none; float: right; z-index: 100; width: 42%; text-align: right; font-size: small; padding: .1em 0 .05em 0; line-height: 1em; margin: 0 .5em 0 1em; }
 #project-selector label { padding: .5em; }
@@ -154,13 +153,13 @@ td.login-info-left		{ width: 33%; padding: 0px; text-align: left; }
 td.login-info-middle	{ width: 33%; padding: 0px; text-align: center; }
 td.login-info-right		{ width: 33%; padding: 0px; text-align: right; white-space: nowrap; }
 
-.bug-jump { clear: both; display:block; float: right; padding: .25em; margin: 0; position: relative; top: .3em; z-index: 100; border: none; }
+.bug-jump { margin-top: 10px; }
 
 #container { }
 
 .main-menu { /*float: right;*/width:100%; margin: 0; padding: 0; overflow: hidden; font-size: 1em; /*position: relative; top: -2em; border: 1px solid #999; z-index: 99; */ }
 
-.main-menu div { /*width: 93.75%;*/ }
+.main-menu div { position: relative; /*width: 93.75%;*/ }
 /*
 .main-menu ul { clear: left; float: left; list-style: none; position: relative; left: 50%; margin: 0 0 0 -3.75em; padding: .25em; width: 90%; }
 .main-menu ul li { display:block; float: left; list-style: none; padding: .15em .5em; margin: 0; position: relative; right: 50%; }
@@ -714,4 +713,36 @@ div.ExpandCollapseButton{
 .ECButtonExpanded{background-position:0px 0px!important;}
 .ECButtonCollapsed{background-position:-14px 0px!important;}
 
+a.my-account-link, a.logout-link {
+    text-decoration: none;
+    text-align: center;
+}
 
+a.my-account-link:after {
+    content: ' | ';
+}
+
+/*
+a.my-account-link, a.logout-link { 
+    display: block;
+    width: 100px;
+    margin: 0 auto;
+    padding: 5px;
+    color: #666;
+    border: 1px solid #6C6;
+    background-color: #E6F6D5;
+    text-decoration: none;
+    text-align: center;
+}
+
+a.my-account-link:hover, a.logout-link:hover {
+    background-color: #fff;
+}
+a.my-account-link {
+    
+}
+
+a.logout-link {
+    margin-top: 5px;
+}
+*/
