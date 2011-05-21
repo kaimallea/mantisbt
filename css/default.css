@@ -101,7 +101,9 @@ tr.row-1			{ background-color: #d8d8d8; color: #000000; }
 tr.row-2			{ background-color: #e8e8e8; color: #000000; }
 tr.row-category		{ background-color: #c8c8e8; color: #000000; font-weight: bold;}
 tr.row-category td  {  text-align:center; }
-tr.row-category2	{ background-color: #c8c8e8; color: #000000; }
+tr.row-category2	{ background-color: #7A7A7A; color: #fff; margin-bottom: 5px;}
+tr.row-category2 a  { color: #ffffff; }
+
 tr.row-category-history { background-color: #c8c8e8; color: #000000; font-weight: bold;}
 tr.row-category-history td {  text-align: left; }
 tr.vcenter			{ vertical-align: middle; }

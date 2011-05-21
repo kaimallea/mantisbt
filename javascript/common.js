@@ -276,8 +276,18 @@ $(document).ready( function() {
     
     // Make bug list sortable on 'View Issues' page
     $('table#buglist tbody').sortable({'items': 'tr:not(:last)'});
-        
+    
+    $('#filter_open').each(function () {
+        var $this = $(this),
+            txt = 'Filter Your Ticket Search';
 
+        $this.before($('<div class="header"></div>'))
+        .prev().html( txt )
+    });
+
+    // Re-style rows on ticket filter search
+    $('tr.row-category2 + tr.row-1').after('<tr style="height: 10px"><td colspan="8" style="background-color: #fff"> </td></tr>');
+    
 	// Toggle all sections
 	/*
 	$('td.form-title')
