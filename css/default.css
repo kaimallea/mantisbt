@@ -27,7 +27,7 @@ input.button-small		{ font-size: 1em; }
 textarea			{}
 select				{}
 
-span				{ font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10pt; }
+span				{ font:bold 14px arial,sans-serif;}
 span.print			{ font-size: 8pt; }
 span.required 		{ font-size: 8pt; color: #bb0000; }
 span.small 			{ font-size: 8pt; font-weight: normal; }
@@ -498,7 +498,7 @@ div.field-container {
 	display:block;
 	width: 100%;
 	float: left;
-	margin: 0em 0em 1px 0em;
+	margin: 0em 0em 5px 0em;
 	padding: 0em;
 }
 .field-container>.display-label,
@@ -565,9 +565,9 @@ div.form-container .input  input,
 	left: 0em;
 	padding: 0em;
 	margin: 0em;
-	background-color: #c8c8e8;
+	/*background-color: #c8c8e8;*/
 	height: 100%;
-	border-right: 1px solid #fff;
+	/*border-right: 1px solid #fff;*/
 	z-index: 0;
 }
 .section-links,
@@ -589,7 +589,7 @@ div.form-container label,
 div.form-container .textarea,
 div.form-container .input,
 .display-value {
-	width: 65%;
+	width: 40%;
 }
 div.success-msg,
 div.important-msg {
@@ -748,3 +748,28 @@ a.logout-link {
     margin-top: 5px;
 }
 */
+
+
+/* Styles by Collabracode team */
+#banner {margin:0 auto; width:450px;}
+div#login-div {overflow:hidden; background-color:#99ae6a; width:100%; border:0; padding:15px 0; margin-bottom:15px;}
+#mantis {padding:0;}
+body {margin:0;}
+
+#login-form .odd, #login-form .even, #login-form .field-container, label {background-color:#99ae6a;}
+
+#login-form {width:510px; margin:0 auto; display:block;}
+
+div.field-container label {width:145px; color:#fff; font:bold 12px arial,sans-serif;}
+
+span.check-box, span#session-msg {color:#fff; font:bold 12px arial,sans-serif;}
+
+input#secure-session {float:left;}
+
+div.field-container {overflow:hidden;}
+
+ul.actions {overflow:hidden; list-style-type:none; margin:0 auto; width:620px;}
+ul.actions li {float:left; margin-right:5px;}
+ul.actions input {/*height:15px;*/}
+
+.msg-error {width:400px; margin:20px auto;}
