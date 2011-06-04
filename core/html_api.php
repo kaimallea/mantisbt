@@ -537,8 +537,8 @@ function html_login_info() {
 		}
 	} else {
 		echo '<span id="logged-in-label">' . lang_get( 'logged_in_as' ) . ' </span>';
-		echo '<span id="logged-in-user">' . string_html_specialchars( $t_username ) . '</span><br/>';
-		echo '<span id="logged-in">';
+		echo '<span id="logged-in-user">' . string_html_specialchars( $t_username ) . '</span>';
+		echo ' <span id="logged-in">';
 		echo !is_blank( $t_realname ) ?  '<span id="logged-in-realname">' . string_html_specialchars( $t_realname ) . '</span>' : '';
 		echo '<span id="logged-in-accesslevel" class="' . $t_access_level . '">' . $t_access_level . '</span>';
 		echo '</span>';
