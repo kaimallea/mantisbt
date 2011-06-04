@@ -167,9 +167,9 @@ if( $f_error || $f_cookie_error ) {
     <div id="login-buttons">
         <ul class="actions">
         	<li><input type="submit" value="<?php echo lang_get( 'login_button' ) ?>" /></li>
-        	<li><input type="submit" value="<?php echo lang_get( 'lost_password_link' ) ?>" /></li>
-        	<li><input type="submit" value="<?php echo lang_get( 'signup_link' ) ?>" /></li>
-        	<li><input type="submit" value="<?php echo lang_get( 'login_anonymously' ) ?>" /></li>
+        	<li><input type="submit" onclick="window.location.replace('lost_pwd_page.php'); return false" value="<?php echo lang_get( 'lost_password_link' ) ?>" /></li>
+        	<li><input type="submit" onclick="window.location.replace('signup_page.php'); return false" value="<?php echo lang_get( 'signup_link' ) ?>" /></li>
+        	<li><input type="submit" disabled="disabled" value="<?php echo lang_get( 'login_anonymously' ) ?>" /></li>
         </ul>
     </div>
 </form>
