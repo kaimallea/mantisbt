@@ -133,13 +133,8 @@ if( $f_error || $f_cookie_error ) {
 
 <!-- Login Form BEGIN -->
 <div id="login-container">
+<form id="login-form" method="post" action="login.php">
 <div id="login-div" class="form-container">
-
-
-
-
-
-	<form id="login-form" method="post" action="login.php">
 		<fieldset>
 			<div class="field-container">
 				<label for="username"><span><?php echo lang_get( 'username' ) ?></span></label>
@@ -168,16 +163,16 @@ if( $f_error || $f_cookie_error ) {
 			<?php } ?>
 
 		</fieldset>
-
-		<ul class="actions">
-    		<li><input type="submit" value="<?php echo lang_get( 'login_button' ) ?>" /></li>
-    		<li><input type="submit" value="<?php echo lang_get( 'lost_password_link' ) ?>" /></li>
-    		<li><input type="submit" value="<?php echo lang_get( 'signup_link' ) ?>" /></li>
-    		<li><input type="submit" value="<?php echo lang_get( 'login_anonymously' ) ?>" /></li>
-		</ul>
-
-	</form>
 </div>
+    <div id="login-buttons">
+        <ul class="actions">
+        	<li><input type="submit" value="<?php echo lang_get( 'login_button' ) ?>" /></li>
+        	<li><input type="submit" value="<?php echo lang_get( 'lost_password_link' ) ?>" /></li>
+        	<li><input type="submit" value="<?php echo lang_get( 'signup_link' ) ?>" /></li>
+        	<li><input type="submit" value="<?php echo lang_get( 'login_anonymously' ) ?>" /></li>
+        </ul>
+    </div>
+</form>
 </div>
 
 <?php

@@ -461,7 +461,7 @@ div.form-container fieldset {
 	margin: 0em;
 	padding: 0em;
 	border: none;
-}
+margin: auto; width: 50%;}
 div#form-container fieldset fieldset {
 	margin: 0em 0em 1px 0em;
 }
@@ -759,7 +759,7 @@ body {margin:0;}
 
 #login-form .odd, #login-form .even, #login-form .field-container { background-color:#99ae6a; }
 
-#login-form {width:510px; margin:0 auto; display:block;}
+#login-form {  display:block;}
 
 div.field-container label {width:145px; color:#fff; font:bold 12px arial,sans-serif;}
 
