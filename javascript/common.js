@@ -304,7 +304,11 @@ $(document).ready( function() {
 
 	//Add row highlighting to View Issues Page
 	addRowHighlighting();
-       	addControlButtons();
+    addControlButtons();
+    
+    // Style buttons
+    $( "input:submit" ).button();
+    
 });
 
 function setBugLabel() {

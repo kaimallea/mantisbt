@@ -169,32 +169,15 @@ if( $f_error || $f_cookie_error ) {
 
 		</fieldset>
 
-			<link rel="stylesheet" type="text/css" href="../plugins/jquery-ui-1.8.13.custom/css/custom-theme/jquery-ui-1.8.13.custom.css" media="all" />
-
-
-					<ul class="actions">
-					<li><input type="submit" value="<?php echo lang_get( 'login_button' ) ?>" /></li>
-					<li><input type="submit" value="<?php echo lang_get( 'lost_password_link' ) ?>" /></li>
-					<li><input type="submit" value="<?php echo lang_get( 'signup_link' ) ?>" /></li>
-					<li><input type="submit" value="<?php echo lang_get( 'login_anonymously' ) ?>" /></li>
-			</ul>
-
+		<ul class="actions">
+    		<li><input type="submit" value="<?php echo lang_get( 'login_button' ) ?>" /></li>
+    		<li><input type="submit" value="<?php echo lang_get( 'lost_password_link' ) ?>" /></li>
+    		<li><input type="submit" value="<?php echo lang_get( 'signup_link' ) ?>" /></li>
+    		<li><input type="submit" value="<?php echo lang_get( 'login_anonymously' ) ?>" /></li>
+		</ul>
 
 	</form>
 </div>
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/jquery-ui.min.js" />
-<script type="text/javascript">
-
-	$(function() {
-		$( "input:submit", ".actions" ).button();
-
-	});
-
-</script>
-
-
-
-
 </div>
 
 <?php
