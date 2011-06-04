@@ -312,8 +312,9 @@ div.quick-summary-right { width: 49%; padding: 2px; text-align: right; float: ri
 .progress400 .bar           { display: block; position: relative; background: #6bba70; text-align: center; font-weight: normal; color: #333; height: 2em; line-height: 2em; }
 
 #footer {
-    font-family: Verdana, Arial, Helvetica, sans-serif;
-    font-size: 10pt;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    color:#666;
     margin: 2em auto;
     clear: both;
 width: 400px; text-align: center;}
@@ -353,7 +354,7 @@ select.tainted { background-color: #ffffff; color: red; }
 .stored-queries select { font-size: .9em; }
 #error-msg { clear: both; }
 .error-msg { color: red; text-align: center; }
-div#error-msg { width: 50%; margin: 0em auto; border: 1px solid #000; }
+div#error-msg { width:438px; /*width: 50%;*/ margin: 0em auto; border: 1px solid #000; }
 div.error-type { font-weight: bold; }
 div.error-description { color: red; text-align: center; margin: 1.5em; }
 div.error-info { text-align: center; margin: 1em; }
@@ -459,9 +460,10 @@ fieldset {
 div.form-container fieldset {
     clear: both;
     margin: 0em;
-    padding: 0em;
+    /*padding: 0em;*/
+    padding:15px 0;
     border: none;
-margin: auto; width: 50%;}
+margin: auto; width:445px; /*width: 50%;*/}
 div#form-container fieldset fieldset {
     margin: 0em 0em 1px 0em;
 }
@@ -558,7 +560,7 @@ div.form-container .select select,
 div.form-container .textarea textarea,
 div.form-container .input  input,
 .display-value span {
-    max-width: 98%;
+    /*max-width: 98%;*/
 }
 .label-style {
     position: absolute;
@@ -590,7 +592,8 @@ div.form-container label,
 div.form-container .textarea,
 div.form-container .input,
 .display-value {
-    width: 40%;
+    /*width: 40%;*/
+    width:60%;
 }
 div.success-msg,
 div.important-msg {
@@ -760,7 +763,7 @@ body {margin:0;}
 
 #login-form .odd, #login-form .even, #login-form .field-container { background-color:#99ae6a; }
 
-#login-form {  display:block;}
+#login-form {display:block;}
 
 div.field-container label {width:145px; color:#fff; font:bold 12px arial,sans-serif;}
 
@@ -770,8 +773,10 @@ input#secure-session {float:left;}
 
 div.field-container {overflow:hidden;}
 
-ul.actions {overflow:hidden; list-style-type:none; margin:0 auto; width:620px;}
+ul.actions {overflow:hidden; list-style-type:none; margin:0 auto; /*width:620px;*/width:503px;}
 ul.actions li {float:left; margin-right:5px;}
 ul.actions input {/*height:15px;*/}
 
-.msg-error {width:400px; margin:20px auto;}
+.msg-error {width:435px; margin:20px auto;}
+
+#mantis div {padding:0;}
