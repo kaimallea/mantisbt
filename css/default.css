@@ -757,7 +757,7 @@ div#login-div {overflow:hidden; background-color:#99ae6a; width:100%; border:0; 
 #mantis {padding:0;}
 body {margin:0;}
 
-#login-form .odd, #login-form .even, #login-form .field-container, label {background-color:#99ae6a;}
+#login-form .odd, #login-form .even, #login-form .field-container { background-color:#99ae6a; }
 
 #login-form {width:510px; margin:0 auto; display:block;}
 
