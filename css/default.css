@@ -200,7 +200,7 @@ span.switch-view:before { content: "[" }
 span.permalink:after,
 span.switch-view:after { content: "]" }
 
-#content { /* clear: both; position: relative; top: 0; */margin: 0; padding: 2em 1em 1em 1em; /*background-color: #f5f5f5; border: 1px solid #6c6; border-top: none;*/}
+#content { /* clear: both; position: relative; top: 0; */margin: 11px; padding: 2em 1em 1em 1em; /*background-color: #f5f5f5; border: 1px solid #6c6; border-top: none;*/}
 .recently-visited { position: relative; top: -2.5em; float: right; text-align: right; font-size: x-small; margin-right: 10px;}
 
 br { clear:both; }
