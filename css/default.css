@@ -27,10 +27,10 @@ input.button-small		{ font-size: 1em; }
 textarea			{}
 select				{}
 
-span				{ font:bold 14px arial,sans-serif;}
+span				{ font: bold 14px arial,sans-serif;}
 span.print			{ font-size: 8pt; }
 span.required 		{ font-size: 8pt; color: #bb0000; }
-span.small 			{ font-size: 8pt; font-weight: normal; }
+span.small 			{ font-size: 10pt; font-weight: normal; }
 span.pagetitle		{ font-size: 12pt; font-weight: bold; text-align: center }
 span.bracket-link	{ white-space: nowrap; }
 
@@ -73,7 +73,7 @@ div.header {
 div.header a        { color: #fff; }
 div.header a:hover  { border-bottom: solid 1px #fff; }
 
-div.header span     { font-size: .9em; }
+div.header span     { font-size: 0.9em; }
 
 td,th 				{ font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10pt; padding: 4px; text-align: left; }
 td.center			{ text-align: center; }
@@ -650,7 +650,7 @@ table tbody tr.highlightedIssue{background:#efefef;color:#000;}
 div.main-menu ul.menu { /* general settings */
     text-align: left; /* set to left, right or center */
     margin: 1em 0 0 0; /* set margins as desired */
-    font: bold 12px Verdana, Arial, sans-serif; /* set font as desired */
+    font: bold 13px Verdana, Arial, sans-serif; /* set font as desired */
     border-bottom: 1px solid #6c6; /* set border COLOR as desired */
     list-style-type: none;
     padding: 3px 10px 6px 10px; /* THIRD number must change with respect to padding-top (X) below */
