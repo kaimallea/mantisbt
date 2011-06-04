@@ -123,6 +123,7 @@ tr.bugnote .time-tracked,
     top: 5px;
     right: 15px;
     line-height: 1em;
+    z-index: 99;
 }
 
 #login-info { }
