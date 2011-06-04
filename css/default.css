@@ -79,12 +79,12 @@ td,th 				{ font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10pt;
 td.center			{ text-align: center; }
 td.left				{ text-align: left; }
 td.right			{ text-align: right; }
-td.category, th.category		{ background-color: #c8c8e8; color: #000000; font-weight: bold; vertical-align : top; }
+td.category, th.category		{ background-color: hsl(240, 21%, 85%); color: #000000; font-weight: bold; vertical-align : top; }
 td.overdue			{ background-color: #ff0000; color: #000000; font-weight: bold; }
 
 td.col-1			{ background-color: #d8d8d8; color: #000000; }
 td.col-2			{ background-color: #e8e8e8; color: #000000; }
-td.form-title		{ background-color: #666666; color: #ffffff; font-weight: bold; text-align: left; }
+td.form-title		{ background-color: hsl(0, 0%, 70%); color: #ffffff; font-weight: bold; text-align: left; }
 td.form-title a     { color: #ffffff; }
 td.form-title-caps	{ background-color: #ffffff; color: #000000; font-weight: bold; text-align: left; text-transform: uppercase; }
 td.nopad			{ padding: 0px; }
@@ -97,7 +97,7 @@ td.print-spacer		{ background-color: #ffffff; color: #000000; font-size: 1pt; li
 
 tr					{}
 tr.spacer			{ background-color: #ffffff; color: #000000; height: 5px; }
-tr.row-1			{ background-color: #d8d8d8; color: #000000; }
+tr.row-1			{ background-color: hsl(0, 10%, 95%); color: #000000; }
 tr.row-2			{ background-color: #e8e8e8; color: #000000; }
 tr.row-category		{ background-color: #c8c8e8; color: #000000; font-weight: bold;}
 tr.row-category td  {  text-align:center; }
