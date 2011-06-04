@@ -488,12 +488,19 @@ function html_top_banner() {
 	if( !is_blank( $t_page ) && file_exists( $t_page ) && !is_dir( $t_page ) ) {
 		include( $t_page );
 	} else if( $t_show_logo ) {
-		echo '<div id="banner">';
+	    $loginPage = false;
+	    
+	    if (strpos($_SERVER['PHP_SELF'], 'login_page.php')) {
+            $loginPage = true;
+        }
+        
+        echo '<div id="banner" class="' . ($loginPage ? 'center' : '') . '">';
+        
 		if( $t_show_url ) {
 			echo '<a id="logo-link" href="', config_get( 'logo_url' ), '">';
 		}
 		
-		if (strpos($_SERVER['PHP_SELF'], 'login_page.php')) {
+		if ($loginPage) {
 		    echo '<img id="logo-image" alt="Mantis Bug Tracker" src="' . helper_mantis_url( config_get( 'logo_login_image' ) ) . '" />';
 		}
 		else {
