@@ -84,7 +84,7 @@ td.overdue          { background-color: #ff0000; color: #000000; font-weight: bo
 
 td.col-1            { background-color: #d8d8d8; color: #000000; }
 td.col-2            { background-color: #e8e8e8; color: #000000; }
-td.form-title       { background-color: hsl(0, 0%, 70%); color: #ffffff; font-weight: bold; text-align: left; }
+td.form-title       { background-color: #666; color: #ffffff; font-weight: bold; text-align: left; }
 td.form-title a     { color: #ffffff; }
 td.form-title-caps  { background-color: #ffffff; color: #000000; font-weight: bold; text-align: left; text-transform: uppercase; }
 td.nopad            { padding: 0px; }
@@ -345,7 +345,7 @@ select.tainted { background-color: #ffffff; color: red; }
 .search-box { float: left; position: relative; padding: 0; margin: 0; }
 .search-box, .save-query, .submit-query, .stored-queries, .manage-queries { top: .3em; }
 .submit-query, .save-query {  float: left; position: relative; padding: 0 .5em; margin: 0; font-size: 1em; }
-.filter-links, .stored-queries, .manage-queries, .reset-query { float: right; position: relative; padding: 0 .5em; margin: 0; z-index: 100; }
+.filter-links, .stored-queries, .manage-queries, .reset-query { float: right; position: relative; padding: 0 .5em; margin: 0; z-index: 100; top: .3em;}
 .save-query {  float: right; }
 
 .filter-box { margin: 0; padding: 0; font-size: .9em; }
@@ -490,10 +490,10 @@ div.form-container fieldset label.required:before {
     float: right;
 }
 .odd {
-    background-color: #d8d8d8;
+    background-color: hsl(0, 0%, 70%);
 }
 .even {
-    background-color: #e8e8e8;
+    background-color: hsl(0, 0%, 80%);
 }
 fieldset fieldset.field-container,
 div.field-container {
